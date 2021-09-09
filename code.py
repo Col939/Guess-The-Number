@@ -16,8 +16,14 @@ def checkGuess():
     if intGuess == x:
         
         print("You Win!")
-    else:
-        print("Try Again :(")
-        checkGuess()
+    elif intGuess > x:
+      
+      print("Too High!")
+      checkGuess()
+            
+    elif intGuess < x:
+      
+      print("Too Low!") 
+      checkGuess()
         
 checkGuess()
