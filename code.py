@@ -5,6 +5,8 @@ maxr=10
 
 num=0
 
+rand_int = random.randint(minr, maxr)
+
 def isInt(number):
     if number != int(number):
         print("Error: Guess could not be converted to a type 'int'")
@@ -23,11 +25,8 @@ def checkIfIsInRange(guess):
    else:
         return True
 
-def getRadomINT():
-    rand_intt = random.randint(minr, maxr)
-    return rand_intt
+    
 def guessSelector():
-    rand_int = getRadomINT()
     guess_no_int = input("Guess: \n")
     print(rand_int)
     guess=int(guess_no_int)
@@ -37,10 +36,10 @@ def guessSelector():
         print("Correct! ")
     else:
         if guess < rand_int:
-            print("Guess to small")
+            print("Guess too small")
             guessSelector()
         if guess > rand_int:
-            print("Guess to large")
+            print("Guess too large")
             guessSelector()
         
 guessSelector()
