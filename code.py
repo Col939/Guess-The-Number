@@ -5,7 +5,6 @@ x = 0
 def startGame():
   global x
   x = random.randint(0, 100)
-  print(x)
 startGame()  
 
 def checkGuess():
